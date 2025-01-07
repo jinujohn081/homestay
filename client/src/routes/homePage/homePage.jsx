@@ -9,9 +9,7 @@ function HomePage() {
     <div className='homepage'>
       <div className='textContainer'>
         <div className='wrapper'>
-          <h1 className='title'>
-            find jjdjdhdjdjkreal estate & get your dream place!!
-          </h1>
+          <h1 className='title'>find real estate & get your dream place!!</h1>
           <SearchBar />
         </div>
       </div>
