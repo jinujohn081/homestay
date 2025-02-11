@@ -3,10 +3,11 @@
 .homepage {
   display: flex;
   height: 100%;
+  text-align: center;
 
   .textContainer {
     flex: 3;
-    background-color: burlywood;
+    background-color: #edb46921;
     padding: 20px;
 
     .wrapper {

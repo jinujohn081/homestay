@@ -31,37 +31,39 @@ function SearchBar() {
           </button>
         ))}
       </div>
-      <form>
-        <input
-          type='text'
-          name='city'
-          placeholder='City'
-          onChange={handleChange}
-        />
-        <input
-          type='text'
-          name='minPrice'
-          min={0}
-          max={10000000}
-          onChange={handleChange}
-          placeholder='Mininum Price'
-        />
-        <input
-          type='text'
-          name='maxPrice'
-          min={0}
-          max={10000000}
-          onChange={handleChange}
-          placeholder='Max Price'
-        />
-        <Link
-          to={`/list?type=${query.type}&city=${query.city}&minPrice=${query.minPrice}&maxPrice=${query.maxPrice}`}
-        >
-          <button>
-            <img src='/search.png' alt='' />
-          </button>
-        </Link>
-      </form>
+      <div className='formContainer'>
+        <form>
+          <input
+            type='text'
+            name='city'
+            placeholder='City'
+            onChange={handleChange}
+          />
+          <input
+            type='text'
+            name='minPrice'
+            min={0}
+            max={10000000}
+            onChange={handleChange}
+            placeholder='Mininum Price'
+          />
+          <input
+            type='text'
+            name='maxPrice'
+            min={0}
+            max={10000000}
+            onChange={handleChange}
+            placeholder='Max Price'
+          />
+          <Link
+            to={`/list?type=${query.type}&city=${query.city}&minPrice=${query.minPrice}&maxPrice=${query.maxPrice}`}
+          >
+            <button>
+              <img src='/search.png' alt='' />
+            </button>
+          </Link>
+        </form>
+      </div>
     </div>
   );
 }

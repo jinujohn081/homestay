@@ -1,8 +1,13 @@
 @use '../..//responsive.scss' as *;
 .searchbar {
+  .formContainer {
+    width: 700px;
+    margin: 0 auto;
+  }
   .type {
     button {
       padding: 16px 36px;
+      margin-bottom: 10px;
 
       border: none;
       cursor: pointer;
@@ -66,7 +71,7 @@
 
     a {
       width: 100px;
-      background-color: #fece51;
+      background-color: #000000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -74,7 +79,7 @@
       button {
         border: none;
         cursor: pointer;
-        background-color: #fece51;
+        background-color: #000000;
 
         @include sm {
           padding: 10px;
