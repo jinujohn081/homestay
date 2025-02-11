@@ -1,16 +1,16 @@
-import './card.scss';
 import { Link } from 'react-router-dom';
+import './card.scss';
 
 function Card({ item }) {
   return (
     <div className='card'>
-      <Link href={`/${item.id}`} className='imageContainer'>
-        <img src={item.img} />
+      <Link to={`/${item.id}`} className='imageContainer'>
+        <img src={item.images[0]} alt='' />
       </Link>
       <div className='textContainer'>
-        <h3 className='title'>
-          <Link hrefLang={`/${item.id}`}>{item.title}</Link>
-        </h3>
+        <h2 className='title'>
+          <Link to={`/${item.id}`}>{item.title}</Link>
+        </h2>
         <p className='address'>
           <img src='/pin.png' alt='' />
           <span>{item.address}</span>
@@ -20,18 +20,12 @@ function Card({ item }) {
           <div className='features'>
             <div className='feature'>
               <img src='/bed.png' alt='' />
-              <div className='feature-item'>
-                <span>{item.bedroom}</span>
-                <span>bedroom</span>
-              </div>
+              <span>{item.bedroom} bedroom</span>
             </div>
             <div className='feature'>
-              <img src='/bed.png' alt='' />
-              <div className='feature-item'>
-                <span>{item.bathroom}</span>
-                <span>bathroom</span>
-              </div>
-            </div>{' '}
+              <img src='/bath.png' alt='' />
+              <span>{item.bathroom} bathroom</span>
+            </div>
           </div>
           <div className='icons'>
             <div className='icon'>

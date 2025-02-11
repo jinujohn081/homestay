@@ -1,15 +1,14 @@
-import React from 'react';
-import { listData } from '../../lib/data';
+import './list.scss';
 import Card from '../card/Card';
 
-const List = () => {
+function List({ posts }) {
   return (
-    <div>
-      {listData.map((item) => (
+    <div className='list'>
+      {posts.map((item) => (
         <Card key={item.id} item={item} />
       ))}
     </div>
   );
-};
+}
 
 export default List;

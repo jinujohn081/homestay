@@ -1,10 +1,13 @@
 import './NavBar.scss';
 import { useState } from 'react';
+import { AuthContext } from '../../context/AuthContext';
+import { useContext } from 'react';
 
 import { Link } from 'react-router-dom';
 function NavBar() {
+  const { currentUser } = useContext(AuthContext);
   const [open, setOpen] = useState(false);
-  const user = true;
+
   return (
     <nav>
       <div className='left'>
@@ -18,13 +21,10 @@ function NavBar() {
         <a href='/'>Agents</a>
       </div>
       <div className='right'>
-        {user ? (
+        {currentUser ? (
           <div className='user'>
-            <img
-              src='https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-              alt=''
-            />
-            <span>John Doe</span>
+            <img src={currentUser.avatar || 'noavatar.jpg'} alt='' />
+            <span>{currentUser.username}</span>
             <Link to='/profile' className='profile'>
               <div className='notification'>3</div>
               <span>Profile</span>
@@ -32,10 +32,8 @@ function NavBar() {
           </div>
         ) : (
           <>
-            <a href='/'>Sign in</a>
-            <a href='/' className='register'>
-              Sign up
-            </a>
+            <Link to='/login'>Sign in</Link>
+            <Link to='/register'> Sign up</Link>
           </>
         )}
         <div className='menuIcon'>

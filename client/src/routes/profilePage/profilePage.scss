@@ -52,6 +52,15 @@
           align-items: center;
           gap: 20px;
         }
+        button {
+          width: 100px;
+          background-color: teal;
+          border: none;
+          color: white;
+          padding: 10px 20px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
 
         img {
           width: 40px;
@@ -74,7 +83,7 @@
 
     .wrapper {
       padding: 0px 20px;
-      height: 100%;
+      // height: 100%;
     }
   }
 }
