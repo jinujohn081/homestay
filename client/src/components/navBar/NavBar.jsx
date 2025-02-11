@@ -17,8 +17,8 @@ function NavBar() {
         </a>
         <a href='/'>Home</a>
         <a href='/'>About</a>
-        <a href='/'>Contact</a>
-        <a href='/'>Agents</a>
+        <a href='/list'>Lists of Houses</a>
+        <a href='/login'>Agents</a>
       </div>
       <div className='right'>
         {currentUser ? (

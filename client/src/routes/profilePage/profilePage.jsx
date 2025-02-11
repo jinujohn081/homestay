@@ -59,9 +59,9 @@ function ProfilePage() {
               {(postResponse) => <List posts={postResponse.data.userPosts} />}
             </Await>
           </Suspense>
-          <div className='title'>
+          {/* <div className='title'>
             <h1>Saved List</h1>
-          </div>
+          </div> */}
           <Suspense fallback={<p>Loading...</p>}>
             <Await
               resolve={data.postResponse}
@@ -72,8 +72,8 @@ function ProfilePage() {
           </Suspense>
         </div>
       </div>
-      <div className='chatContainer'>
-        {/* <div className='wrapper'>
+      {/* <div className='chatContainer'>
+        <div className='wrapper'>
           <Suspense fallback={<p>Loading...</p>}>
             <Await
               resolve={data.chatResponse}
@@ -82,8 +82,8 @@ function ProfilePage() {
               {(chatResponse) => <Chat chats={chatResponse.data} />}
             </Await>
           </Suspense>
-        </div> */}
-      </div>
+        </div>
+      </div> */}
     </div>
   );
 }

@@ -138,7 +138,7 @@ function SinglePage() {
           <div className='mapContainer'>
             <Map items={[post]} />
           </div>
-          <div className='buttons'>
+          {/* <div className='buttons'>
             <button>
               <img src='/chat.png' alt='' />
               Send a Message
@@ -152,7 +152,7 @@ function SinglePage() {
               <img src='/save.png' alt='' />
               {saved ? 'Place Saved' : 'Save the Place'}
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
